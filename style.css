@@ -1,0 +1,117 @@
+.flex {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.loader {
+  flex-basis: 100%;
+  max-width: 100%;
+  min-height: 300px;
+  max-height: 300px;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  z-index: 1;
+}
+  .loader-container {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+ .ball {
+      position: absolute;
+    }
+
+.loader ::before,
+.loader ::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+}
+/* loader default-01 */
+.default .loader-container {
+  position:relative;
+  width: 80px;
+  height: 80px;
+}
+.default .ball {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 15%;
+  height: 50%;
+  background-color: transparent;
+  transform-origin: bottom center;
+  overflow: visible;
+}
+.default .ball:nth-of-type(2) {
+  transform: translate(-50%, 0) rotate(45deg);
+}
+.default .ball:nth-of-type(3) {
+  transform: translate(-50%, 0) rotate(90deg);
+}
+.default .ball:nth-of-type(4) {
+  transform: translate(-50%, 0) rotate(135deg);
+}
+.default .ball:nth-of-type(5) {
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.default .ball:nth-of-type(6) {
+  transform: translate(-50%, 0) rotate(225deg);
+}
+.default .ball:nth-of-type(7) {
+  transform: translate(-50%, 0) rotate(270deg);
+}
+.default .ball:nth-of-type(8) {
+  transform: translate(-50%, 0) rotate(315deg);
+}
+.default-01 .ball::before {
+  top: 0;
+  left: 0;
+  width: 80%;
+  padding-bottom: 80%;
+  border-radius: 50%;
+  background-color: #eee;
+  transform: translateZ(0);
+  animation: default1 1.6s infinite linear;
+}
+.default-01 .ball:nth-of-type(2)::before {
+  animation-delay: 0.2s;
+}
+.default-01 .ball:nth-of-type(3)::before {
+  animation-delay: 0.4s;
+}
+.default-01 .ball:nth-of-type(4)::before {
+  animation-delay: 0.6s;
+}
+.default-01 .ball:nth-of-type(5)::before {
+  animation-delay: 0.8s;
+}
+.default-01 .ball:nth-of-type(6)::before {
+  animation-delay: 1.0s;
+}
+.default-01 .ball:nth-of-type(7)::before {
+  animation-delay: 1.2s;
+}
+.default-01 .ball:nth-of-type(8)::before {
+  animation-delay: 1.4s;
+}
+@keyframes default1 {
+  33% {
+    transform: scale(1.6) translateZ(0);
+    background-color: #6B3E94;
+  }
+  66% {
+    transform: scale(1, 1) translateZ(0);
+    background-color: #ccc;
+  }
+  100% {
+    transform: scale(1, 1) translateZ(0);
+    background-color: #eee;
+  }
+}
+.count{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
